@@ -39,7 +39,7 @@ fuzzy-grading-system/
 ## Kurulum
 
 ```bash
-git clone https://github.com/yourusername/fuzzy-grading-system.git
+git clone https://github.com/svarts/fuzzy-grading-system.git
 cd fuzzy-grading-system
 python3 -m venv venv
 source venv/bin/activate   # Windows: venv\Scripts\activate
@@ -56,37 +56,36 @@ python main.py
 
 ### 1. Üyelik Fonksiyonları
 
-Her girdi değişkeni için üçlü alt-kümeler tanımlandı:
+Her girdi değişkeni için üçlü alt-kümeler tanımlandı: **Düşük (Low)**, **Orta (Medium)**, **Yüksek (High)**.
 
-* **Düşük (Low)**, **Orta (Medium)**, **Yüksek (High)**
-
-Örnek: **Vize Sınavı** için:
+**Örnek: Vize Sınavı için** üçgen üyelik fonksiyonları:
 
 $$
 \mu_{Low}(x)=
 \begin{cases}
-1, & x\le40\\
-\frac{60 - x}{20}, & 40<x<60\\
-0, & x\ge60
+1, & x\le 40,\\
+\frac{60 - x}{20}, & 40 < x < 60,\\
+0, & x \ge 60
 \end{cases}
 $$
 
 $$
 \mu_{Medium}(x)=
 \begin{cases}
-\frac{x - 40}{20}, & 40<x<60\\
-1, & 60\le x\le80\\
-\frac{100 - x}{20}, & 80<x<100\\
-0, & \text{diğer}
+0, & x \le 40,\\
+\frac{x - 40}{20}, & 40 < x < 60,\\
+1, & 60 \le x \le 80,\\
+\frac{100 - x}{20}, & 80 < x < 100,\\
+0, & x \ge 100
 \end{cases}
 $$
 
 $$
 \mu_{High}(x)=
 \begin{cases}
-0, & x\le60\\
-\frac{x - 60}{20}, & 60<x<80\\
-1, & x\ge80
+0, & x \le 60,\\
+\frac{x - 60}{20}, & 60 < x < 80,\\
+1, & x \ge 80
 \end{cases}
 $$
 
