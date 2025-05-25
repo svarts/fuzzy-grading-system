@@ -4,7 +4,7 @@ from controller import sim
 class GradeApp(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("🎓 Fuzzy Öğrenci Notlandırma 🌈")
+        self.setWindowTitle("🎓 Fuzzy Öğrenci Notlandırma Sistemi")
         self.setGeometry(150, 100, 600, 800)
         self.setStyleSheet("background-color: #f0f4f8;")
 
